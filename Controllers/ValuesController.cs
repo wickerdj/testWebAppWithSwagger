@@ -9,14 +9,26 @@ namespace testWebAppWithSwagger.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        // GET api/values
+        /// <summary>
+        ///  Returns a collection of values
+        /// </summary>
+        ///<remarks>
+        /// This is a remark to add additional information about this method
+        ///  GET /get
+        /// {
+        ///    "value1", 
+        ///    "value2"
+        /// }
+        ///</remarks>
         [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/values/5
+        /// <summary>
+        ///  Returns an item from a collection of values based on ID
+        /// </summary>
         [HttpGet("{id}")]
         public string Get(int id)
         {
